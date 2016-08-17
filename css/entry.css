@@ -91,11 +91,16 @@
     background-image: url("../images/icons/coins.svg");
 }
 
+.entry__title {
+    text-align: center;
+}
+
 .entry__date {
     margin-bottom: 15px;
     
     font-style: italic;
     font-size: 0.8em;
+    text-align: center;
 }
 
 .entry__image {
@@ -117,11 +122,6 @@
     
     .entry__text--full {
         width: 100%;
-    }
-    
-    .entry__title,
-    .entry__date {
-        text-align: center;
     }
     
     .entry:nth-child(even) .entry__image {
