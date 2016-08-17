@@ -1,0 +1,22 @@
+.timeline {
+    width: 100%;
+    max-width: 1200px;
+    padding: 50px 20px 30px 20px;
+    margin: 0 auto;
+    
+    position: relative;
+}
+
+.timeline:before {
+    content: '';
+    
+    height: 100%;
+    width: 4px;
+    margin-left: -2px;
+    
+    background: #d7e4ed;
+    
+    position: absolute;
+    top: 0;
+    left: 50%;
+}

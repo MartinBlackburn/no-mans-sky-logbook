@@ -1,0 +1,135 @@
+.entry {
+    margin-bottom: 80px;
+    
+    position: relative;
+}
+
+.entry:last-child {
+    margin-bottom: 0;
+}
+
+.entry__content {
+    width: 100%;
+    padding: 40px 20px 20px 20px;
+    border-radius: 4px;
+    box-shadow: 0 3px 0 #d7e4ed;
+    display: inline-block;
+        
+    background: #fff;
+}
+
+.entry__content:after {
+    content: ' ';
+    
+    clear: both;
+    height: 0;
+    display: block;
+    visibility: hidden;
+}
+
+.entry__icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.1), 0 2px 0 rgba(0, 0, 0, 0.1);
+    margin-left: -30px;
+    
+    background-color: #524f61;
+    background-image: url("../images/icons/write.svg");
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    position: absolute;
+    top: -30px;
+    left: 50%;
+}
+
+.entry--alien .entry__icon {
+    background-color: #e87c7c;
+    background-image: url("../images/icons/alien.svg");
+}
+
+.entry--animal .entry__icon {
+    background-color: #e87c7c;
+    background-image: url("../images/icons/animal.svg");
+}
+
+.entry--location .entry__icon {
+    background-color: #7CACDB;
+    background-image: url("../images/icons/location.svg");
+}
+
+.entry--log .entry__icon {
+    background-color: #524f61;
+    background-image: url("../images/icons/write.svg");
+}
+
+.entry--planet .entry__icon {
+    background-color: #7CACDB;
+    background-image: url("../images/icons/planet.svg");
+}
+
+.entry--plant .entry__icon {
+    background-color: #75ce66;
+    background-image: url("../images/icons/plant.svg");
+}
+
+.entry--ship .entry__icon {
+    background-color: #a57cdb;
+    background-image: url("../images/icons/ship.svg");
+}
+
+.entry--technology .entry__icon {
+    background-color: #6ec3c3;
+    background-image: url("../images/icons/circuit.svg");
+}
+
+.entry--treasure .entry__icon {
+    background-color: #f1c751;
+    background-image: url("../images/icons/coins.svg");
+}
+
+.entry__date {
+    margin-bottom: 15px;
+    
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+.entry__image {
+    margin-bottom: 15px;
+}
+
+@media screen and (min-width: 850px) {
+    .entry__image {
+        width: 50%;
+        margin-bottom: 0;
+        float: left;
+    }
+    
+    .entry__text {
+        width: 50%;
+        padding-left: 20px;
+        float: left;
+    }
+    
+    .entry__text--full {
+        width: 100%;
+    }
+    
+    .entry__title,
+    .entry__date {
+        text-align: center;
+    }
+    
+    .entry:nth-child(even) .entry__image {
+        float: right;
+    }
+    
+    .entry:nth-child(even) .entry__text {
+        padding-left: 0;
+        padding-right: 20px;
+    }
+}
