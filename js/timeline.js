@@ -6,7 +6,7 @@ App.Timeline = (function()
      * Variables
      */
     var entriesPath = "logs/";
-    var numberOfEntries = 14;
+    var numberOfEntries = 16;
     
     
     
