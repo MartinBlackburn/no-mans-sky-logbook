@@ -2,7 +2,7 @@ var App = App || {};
 
 // start the app
 App.init = function () {
-    App.Timeline.init();
+    App.Timeline.loadCurrentPage();
 };
 
 // run on DOM load

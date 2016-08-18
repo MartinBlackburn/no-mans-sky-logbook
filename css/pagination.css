@@ -1,0 +1,17 @@
+.pagination {
+    padding: 25px;
+    
+    text-align: center;
+}
+
+.pagination__button {
+    padding: 5px 15px;
+    border-radius: 4px;
+    box-shadow: 0 3px 0 #d7e4ed;
+    display: inline-block;
+    
+    color: #102533;
+    text-decoration: none;
+    
+    background: #fff;
+}
