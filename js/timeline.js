@@ -6,7 +6,7 @@ App.Timeline = (function()
      * Settings
      */
     var entriesPath = "logs/";
-    var numberOfEntries = 37;
+    var numberOfEntries = 42;
     var entriesPerPage = 25;
     
     /**
