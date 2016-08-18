@@ -23,6 +23,13 @@ App.Timeline = (function()
     $(".pagination__button--prev").on("click", loadPreviousPage);
     $(".pagination__button--next").on("click", loadNextPage);
     
+    /**
+     * Event for using the browser back button or refresh
+     */
+    $(window).on('popstate', function() {
+        init();
+    });
+    
     
     
     
@@ -38,6 +45,8 @@ App.Timeline = (function()
         
         if(page && page > 0 && page <= maxPages) {
             currentPage = page;
+        } else {
+            currentPage = 1;
         }
         
         loadCurrentPage();
@@ -53,9 +62,6 @@ App.Timeline = (function()
         addPlaceholders();
         loadEntries();
         hideShowButtons();
-        
-        var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?page=' + currentPage;
-        window.history.pushState({path:newurl},'',newurl);
     }
     
     /**
@@ -66,6 +72,10 @@ App.Timeline = (function()
         event.preventDefault();
         
         currentPage++;
+        
+        var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?page=' + currentPage;
+        window.history.pushState({path:newurl},'',newurl);
+        
         loadCurrentPage();
     }
     
@@ -77,6 +87,10 @@ App.Timeline = (function()
         event.preventDefault();
         
         currentPage--;
+        
+        var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?page=' + currentPage;
+        window.history.pushState({path:newurl},'',newurl);
+        
         loadCurrentPage();
     }
     
