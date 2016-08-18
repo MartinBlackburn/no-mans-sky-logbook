@@ -25,6 +25,24 @@ App.Timeline = (function()
     
     
     
+    
+    
+    /**
+     * Setup
+     */
+    function init()
+    {
+        //check url for page
+        //set current page if found and not of range of min/max pages
+        var page = getParameterByName("page");
+        
+        if(page && page > 0 && page <= maxPages) {
+            currentPage = page;
+        }
+        
+        loadCurrentPage();
+    }
+    
     /**
      * Load current page of entries
      */
@@ -35,6 +53,9 @@ App.Timeline = (function()
         addPlaceholders();
         loadEntries();
         hideShowButtons();
+        
+        var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?page=' + currentPage;
+        window.history.pushState({path:newurl},'',newurl);
     }
     
     /**
@@ -115,9 +136,6 @@ App.Timeline = (function()
     
     /**
      * Display a entry within its placeholder
-     *
-     * @param int index
-     * @param object entry
      */
     function renderEntry(index, entry)
     {
@@ -168,6 +186,29 @@ App.Timeline = (function()
     }
     
     
+    /**
+     * Get a parameter from teh url
+     * Taken from http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+     */
+    function getParameterByName(name) {
+        name = name.replace(/[\[\]]/g, "\\$&");
+        
+        var url = window.location.href;
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)");
+        var results = regex.exec(url);
+        
+        if (!results) {
+            return null;
+        }
+        
+        if (!results[2]) {
+            return '';
+        }
+        
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+    
+    
     
     
     
@@ -175,6 +216,6 @@ App.Timeline = (function()
      * Public functions
      */
     return {
-        loadCurrentPage: loadCurrentPage
+        init: init
     };
 })();
