@@ -63,7 +63,7 @@
 
 .entry--log .entry__icon {
     background-color: #524f61;
-    background-image: url("../images/icons/write.svg");
+    background-image: url("../images/icons/log.svg");
 }
 
 .entry--planet .entry__icon {
@@ -83,12 +83,12 @@
 
 .entry--technology .entry__icon {
     background-color: #6ec3c3;
-    background-image: url("../images/icons/circuit.svg");
+    background-image: url("../images/icons/technology.svg");
 }
 
 .entry--treasure .entry__icon {
     background-color: #f1c751;
-    background-image: url("../images/icons/coins.svg");
+    background-image: url("../images/icons/treasure.svg");
 }
 
 .entry__title {
