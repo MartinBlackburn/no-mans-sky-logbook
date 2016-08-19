@@ -5,7 +5,7 @@ App.Timeline = (function()
     /**
      * Settings
      */
-    var numberOfEntries = 51;
+    var numberOfEntries = 55;
     var entriesPerPage = 25;
     
     /**
