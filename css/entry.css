@@ -105,6 +105,8 @@
 
 .entry__image {
     margin-bottom: 15px;
+    
+    cursor: pointer;
 }
 
 @media screen and (min-width: 850px) {
