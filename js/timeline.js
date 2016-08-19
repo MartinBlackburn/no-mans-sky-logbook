@@ -5,14 +5,14 @@ App.Timeline = (function()
     /**
      * Settings
      */
-    var numberOfEntries = 49;
+    var numberOfEntries = 51;
     var entriesPerPage = 25;
     
     /**
      * Variables
      */
     var currentPage = 1;
-    var maxPages = Math.floor(numberOfEntries / entriesPerPage) + 1;
+    var maxPages = Math.floor((numberOfEntries - 1) / entriesPerPage) + 1;
     var startEntry;
     var endEntry;
     
