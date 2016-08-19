@@ -5,7 +5,6 @@ App.Timeline = (function()
     /**
      * Settings
      */
-    var entriesPath = "logs/";
     var numberOfEntries = 49;
     var entriesPerPage = 25;
     
@@ -140,7 +139,7 @@ App.Timeline = (function()
         for (var i = startEntry; i <= endEntry; i++) {
             $.ajax({
                 dataType: "json",
-                url: entriesPath + i + ".json",
+                url: "logs/" + i + ".json",
                 index: i,
                 cache: false,
                 success: function(entry) { renderEntry(this.index, entry) }
